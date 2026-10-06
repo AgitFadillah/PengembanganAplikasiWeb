@@ -7,7 +7,6 @@ identitas
 nama saya Agit Fadillah
 nim 124140157
 kelas RB
-foldernya agitfadillah_124140157_pertemuan1, reponya pemrograman_web_itera_124140157
 
 deskripsi singkat
 jadi ini aplikasi kasir simpel buat kantin kampus gitu. ceritanya kasir input barang, terus otomatis kehitung, terus kesimpen jadi ga ilang walau di refresh.

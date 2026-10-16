@@ -17,7 +17,12 @@ class TaskItem {
   }
 
   static fromJSON(json) {
-    const t = new TaskItem(json.title, json.description, json.deadline, json.completed);
+    const t = new TaskItem(
+      json.title,
+      json.description,
+      json.deadline,
+      json.completed,
+    );
     t.id = json.id;
     t.createdAt = json.createdAt;
     return t;
@@ -30,14 +35,14 @@ class TaskItem {
       description: this.description,
       deadline: this.deadline,
       completed: this.completed,
-      createdAt: this.createdAt
+      createdAt: this.createdAt,
     };
   }
 
   toListItemHTML() {
     const statusClass = this.completed ? "status-completed" : "status-pending";
     const statusText = this.completed ? "Selesai" : "Proses";
-    const toggleLabel = this.completed ? 'Belum Selesai' : 'Selesai';
+    const toggleLabel = this.completed ? "Belum Selesai" : "Selesai";
     return `
       <li class="task-item bg-gray-50 p-4 rounded-lg flex items-center justify-between" data-id="${this.id}">
         <div class="flex-1">
@@ -75,7 +80,7 @@ class DashboardApp {
       return {
         temperature: w.temperature,
         windspeed: w.windspeed,
-        weather: w.weathercode
+        weather: w.weathercode,
       };
     } catch (error) {
       return { error: error.message };
@@ -96,12 +101,17 @@ class DashboardApp {
   loadFromStorage() {
     const storedTasks = loadFromStorage(STORAGE_KEYS.TASKS);
     const storedNotes = loadFromStorage(STORAGE_KEYS.NOTES);
-    this.tasks = storedTasks ? storedTasks.map((t) => TaskItem.fromJSON(t)) : [...initialTodos];
+    this.tasks = storedTasks
+      ? storedTasks.map((t) => TaskItem.fromJSON(t))
+      : [...initialTodos];
     this.notes = storedNotes || [];
   }
 
   saveToStorage() {
-    saveToStorage(STORAGE_KEYS.TASKS, this.tasks.map((t) => t.toJSON()));
+    saveToStorage(
+      STORAGE_KEYS.TASKS,
+      this.tasks.map((t) => t.toJSON()),
+    );
     saveToStorage(STORAGE_KEYS.NOTES, this.notes);
   }
 
@@ -151,7 +161,10 @@ class DashboardApp {
 
   addNote(text) {
     if (!text.trim()) return;
-    this.notes = [...this.notes, { id: Date.now(), text, createdAt: new Date().toISOString() }];
+    this.notes = [
+      ...this.notes,
+      { id: Date.now(), text, createdAt: new Date().toISOString() },
+    ];
     this.saveToStorage();
   }
 

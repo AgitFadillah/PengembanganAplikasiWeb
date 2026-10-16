@@ -1,70 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard agit</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 min-h-screen">
-  <div class="max-w-6xl mx-auto px-4 py-6">
-    <header class="mb-8">
-      <h1 class="text-3xl font-bold text-blue-600 mb-2">Dashboard Tugas Agit</h1>
-      <p class="text-gray-600">Reminder Tugas, dan catatan pribadi</p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard agit</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-6">
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold text-blue-600 mb-2">
+          Dashboard Tugas Agit
+        </h1>
+        <p class="text-gray-600">Reminder Tugas, dan catatan pribadi</p>
+      </header>
 
-    <section class="bg-white p-6 rounded-xl shadow-md mb-6">
-      <h2 class="text-xl font-semibold mb-4">Cuaca Terkini</h2>
-      <div id="weather-widget" class="flex items-center justify-between">
-        <span class="text-gray-500">Memuat cuaca...</span>
-      </div>
-    </section>
+      <section class="bg-white p-6 rounded-xl shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Cuaca Terkini</h2>
+        <div id="weather-widget" class="flex items-center justify-between">
+          <span class="text-gray-500">Memuat cuaca...</span>
+        </div>
+      </section>
 
-    <section class="bg-white p-6 rounded-xl shadow-md mb-6">
-      <h2 class="text-xl font-semibold mb-4">Kutipan Hari</h2>
-      <div id="quote-widget" class="text-center py-6">
-        <span class="text-gray-500">Memuat kutipan...</span>
-      </div>
-    </section>
+      <section class="bg-white p-6 rounded-xl shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Kutipan Hari</h2>
+        <div id="quote-widget" class="text-center py-6">
+          <span class="text-gray-500">Memuat kutipan...</span>
+        </div>
+      </section>
 
-    <section class="bg-white p-6 rounded-xl shadow-md mb-6">
-      <h2 class="text-xl font-semibold mb-4">Tambah Tugas Baru</h2>
-      <form id="task-form" class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <input type="text" id="task-title" placeholder="Judul tugas" required class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <input type="text" id="task-desc" placeholder="Deskripsi" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <input type="date" id="task-deadline" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition">Tambah</button>
-      </form>
-    </section>
+      <section class="bg-white p-6 rounded-xl shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Tambah Tugas Baru</h2>
+        <form id="task-form" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <input
+            type="text"
+            id="task-title"
+            placeholder="Judul tugas"
+            required
+            class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="text"
+            id="task-desc"
+            placeholder="Deskripsi"
+            class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="date"
+            id="task-deadline"
+            class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition"
+          >
+            Tambah
+          </button>
+        </form>
+      </section>
 
-    <section class="bg-white p-6 rounded-xl shadow-md mb-6">
-      <h2 class="text-xl font-semibold mb-4">Daftar Tugas</h2>
-      <div class="flex justify-between mb-4">
-        <select id="filter-status" class="px-3 py-2 border rounded-lg focus:outline-none">
-          <option value="all">Semua</option>
-          <option value="completed">Selesai</option>
-          <option value="pending">Belum Selesai</option>
-        </select>
-        <button id="clear-completed" class="bg-green-500 hover:bg-green-600 text-white py-1 px-3 rounded-lg text-sm transition">Tandai Semua Selesai</button>
-      </div>
-      <ul id="task-list" class="space-y-3">
-        <li class="text-gray-400 text-center py-8">Belum ada tugas</li>
-      </ul>
-    </section>
+      <section class="bg-white p-6 rounded-xl shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Daftar Tugas</h2>
+        <div class="flex justify-between mb-4">
+          <select
+            id="filter-status"
+            class="px-3 py-2 border rounded-lg focus:outline-none"
+          >
+            <option value="all">Semua</option>
+            <option value="completed">Selesai</option>
+            <option value="pending">Belum Selesai</option>
+          </select>
+          <button
+            id="clear-completed"
+            class="bg-green-500 hover:bg-green-600 text-white py-1 px-3 rounded-lg text-sm transition"
+          >
+            Tandai Semua Selesai
+          </button>
+        </div>
+        <ul id="task-list" class="space-y-3">
+          <li class="text-gray-400 text-center py-8">Belum ada tugas</li>
+        </ul>
+      </section>
 
-    <section class="bg-white p-6 rounded-xl shadow-md">
-      <h2 class="text-xl font-semibold mb-4">Catatan Saya</h2>
-      <div class="mb-4">
-        <textarea id="note-input" placeholder="Tulis catatan..." rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
-        <button id="add-note" class="mt-2 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition">Simpan Catatan</button>
-      </div>
-      <div id="notes-list" class="space-y-3">
-        <span class="text-gray-400">Belum ada catatan</span>
-      </div>
-    </section>
-  </div>
+      <section class="bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Catatan Saya</h2>
+        <div class="mb-4">
+          <textarea
+            id="note-input"
+            placeholder="Tulis catatan..."
+            rows="3"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          ></textarea>
+          <button
+            id="add-note"
+            class="mt-2 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition"
+          >
+            Simpan Catatan
+          </button>
+        </div>
+        <div id="notes-list" class="space-y-3">
+          <span class="text-gray-400">Tidak ada catatan</span>
+        </div>
+      </section>
+    </div>
 
-  <script type="module" src="js/main.js"></script>
-</body>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>

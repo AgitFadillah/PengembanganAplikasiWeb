@@ -19,7 +19,7 @@ Fitur-fiturnya:
 
 ## Screenshot
 
-![alt text](image-1.png)
+![Tampilan Dashboard Tugas](image.png)
 
 ## Fitur ES6+ yang dipakai
 

@@ -1,6 +1,11 @@
 export const formatDate = (dateStr) => {
   if (!dateStr) return "-";
-  const options = { weekday: "short", year: "numeric", month: "short", day: "numeric" };
+  const options = {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
   return new Date(dateStr).toLocaleDateString("id-ID", options);
 };
 
@@ -13,7 +18,7 @@ export const formatRupiah = (number) =>
   new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
-    maximumFractionDigits: 0
+    maximumFractionDigits: 0,
   }).format(number);
 
 export const saveToStorage = (key, data) => {

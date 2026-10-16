@@ -48,7 +48,8 @@ const renderNotes = () => {
 
   notesList.innerHTML = `
     ${dashboardApp.notes
-      .map((n) => `
+      .map(
+        (n) => `
         <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-start group">
           <div class="flex-1">
             <p class="text-gray-800 whitespace-pre-wrap">${n.text}</p>
@@ -56,7 +57,8 @@ const renderNotes = () => {
           </div>
           <button class="delete-note ml-3 text-red-500 hover:text-red-700 opacity-0 group-hover:opacity-100 transition" data-id="${n.id}">Hapus</button>
         </div>
-      `)
+      `,
+      )
       .join("")}
   `;
 
@@ -73,7 +75,8 @@ const renderWeather = async () => {
   const weatherEl = document.getElementById("weather-widget");
   weatherEl.innerHTML = `<span class="text-gray-500">Memuat cuaca...</span>`;
 
-  const { temperature, windspeed, weather, error } = await dashboardApp.fetchWeather();
+  const { temperature, windspeed, weather, error } =
+    await dashboardApp.fetchWeather();
 
   if (error) {
     weatherEl.innerHTML = `<span class="text-red-500">ERROR: ${error}</span>`;
@@ -81,8 +84,18 @@ const renderWeather = async () => {
   }
 
   const weatherEmojis = {
-    0: "Sunny", 1: "Mostly Sunny", 2: "Partly Cloudy", 3: "Cloudy", 45: "Fog", 48: "Fog",
-    51: "Light Rain", 61: "Rain", 71: "Snow", 80: "Rain Showers", 95: "Thunderstorm", 99: "Thunderstorm"
+    0: "Sunny",
+    1: "Mostly Sunny",
+    2: "Partly Cloudy",
+    3: "Cloudy",
+    45: "Fog",
+    48: "Fog",
+    51: "Light Rain",
+    61: "Rain",
+    71: "Snow",
+    80: "Rain Showers",
+    95: "Thunderstorm",
+    99: "Thunderstorm",
   };
   const emoji = weatherEmojis[weather] || "Cloudy";
 

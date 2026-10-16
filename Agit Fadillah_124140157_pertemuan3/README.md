@@ -20,12 +20,12 @@ Data tersimpan di localStorage — tetap ada walau refresh
 ## Teknologi yang dipake:
 
 **'React 19 : buat UI, lumayan cepet'**
-Vite : build tool andalan
-React Router DOM 7 : ganti halaman tanpa reload
-Context API + hooks : ngatur state global & lokal
-Custom hook : useLocalStorage buat nyimpen data, useBookStats buat ngitung statistik
-React Testing Library + Vitest : ngetest
-PropTypes : validasi props
+**Vite : build tool andalan**
+**React Router DOM 7 : ganti halaman tanpa reload**
+**Context API + hooks : ngatur state global & lokal**
+**Custom hook : useLocalStorage buat nyimpen data, useBookStats buat ngitung statistik**
+**React Testing Library + Vitest : ngetest**
+**PropTypes : validasi props**
 
 
 

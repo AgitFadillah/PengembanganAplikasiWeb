@@ -73,7 +73,7 @@ src/
 
 
 
-Fitur utama:
+# Fitur utama:
 
 1. Kelola buku (tambah/edit/hapus)
 2. Tiga status : milik, sedang baca, mau beli

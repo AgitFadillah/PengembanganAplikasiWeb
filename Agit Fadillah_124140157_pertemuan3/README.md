@@ -94,13 +94,22 @@ PropTypes : validasi tipe data props
 
 
 
-Catatan penting di kode:
+## Catatan Penting di Kode
 
-*BookContext.jsx : pakai error handling khusus biar gampang debug kalau dipanggil diamana-aman
-*useLocalStorage.js : pakai try/catch biar nggak error kalai localStorage bermasalah
-*useBookStats.js : pakai useMemo biar efisien, cuma hitung ulang kalo buku berubah
-*BookForm.jsx : STATUS_OPTIONS jelasin 3 status buku
-*BookList.jsx : filter sama pencarian dikomen biar gampang dibaca
+- **`BookContext.jsx`**  
+  Menggunakan error handling khusus agar proses debugging lebih mudah ketika terjadi kesalahan.
+
+- **`useLocalStorage.js`**  
+  Menggunakan `try/catch` untuk menangani error ketika `localStorage` bermasalah.
+
+- **`useBookStats.js`**  
+  Menggunakan `useMemo` agar statistik buku hanya dihitung ulang ketika data buku berubah.
+
+- **`BookForm.jsx`**  
+  Menggunakan `STATUS_OPTIONS` untuk menjelaskan tiga status buku.
+
+- **`BookList.jsx`**  
+  Memisahkan fitur filter dan pencarian ke dalam komponen agar kode lebih mudah dibaca.
 
 
 

@@ -34,9 +34,13 @@ Cara nyiapain project:
 Pastiin Node.js v18+ terpasang.
 
 git clone https://github.com/AgitFadillah/PengembanganAplikasiWeb.git
+
 cd pemrograman_web_itera_124140157/AgitFadillah_124140157_pertemuan3
+
 npm install
+
 npm run dev
+
 Buka di browser: http://localhost:5173
 
 

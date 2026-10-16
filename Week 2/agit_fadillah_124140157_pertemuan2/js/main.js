@@ -54,7 +54,7 @@ const renderNotes = () => {
             <p class="text-gray-800 whitespace-pre-wrap">${n.text}</p>
             <p class="text-xs text-gray-400 mt-2">${formatDate(n.createdAt)}</p>
           </div>
-          <button class="delete-note ml-3 text-red-500 hover:text-red-700 opacity-0 group-hover:opacity-100 transition" data-id="${n.id}">🗑️</button>
+          <button class="delete-note ml-3 text-red-500 hover:text-red-700 opacity-0 group-hover:opacity-100 transition" data-id="${n.id}">Hapus</button>
         </div>
       `)
       .join("")}

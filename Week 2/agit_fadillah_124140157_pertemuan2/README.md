@@ -1,6 +1,6 @@
 # Pertemuan 2: Personal Dashboard (ES6+)
 
-**Nama:** Leon  
+**Nama:** Agit Fadillah
 **NIM:** 124140157  
 **Mata Kuliah:** Praktikum Pengembangan Aplikasi Web (PAW) - ITERA  
 **Tahun Akademik:** 2026/2027 Gasal

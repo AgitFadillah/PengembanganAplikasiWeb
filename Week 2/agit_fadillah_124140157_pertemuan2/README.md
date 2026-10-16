@@ -1,28 +1,24 @@
-# Pertemuan 2: Personal Dashboard (ES6+)
-
-**Nama:** Agit Fadillah
-**NIM:** 124140157  
-**Mata Kuliah:** Praktikum Pengembangan Aplikasi Web (PAW) - ITERA  
-**Tahun Akademik:** 2026/2027 Gasal
-
----
+Nama: Agit Fadillah
+NIM: 124140157
+Mata Kuliah:** Praktikum Pengembangan Aplikasi Web (PAW) - ITERA  
+Tahun Akademik: 2026/2027 Gasal
 
 ## Penjelasan Aplikasi
 
-Personal Dashboard adalah aplikasi web sederhana untuk mengelola kegiatan harian — tugas kuliah, catatan cepat, dan informasi cuaca/waktu real-time. Aplikasi ini memanfaatkan fitur **JavaScript Next Gen (ES6+)** sepenuhnya dan mengintegrasikan **API publik eksternal** untuk menampilkan data asinkron.
+Personal Dashboard adalah aplikasi web sederhana untuk mengelola kegiatan harian — tugas kuliah, catatan cepat, dan informasi cuaca/waktu real-time. Aplikasi ini memanfaatkan fitur JavaScript Next Gen (ES6+) sepenuhnya dan mengintegrasikan API publik eksternal untuk menampilkan data asinkron.
 
-### Fitur Utama
+Fitur Utama
 
-- **Cuaca Real-time** — Widget cuaca lokasi kampus ITERA (Lampung Selatan) via [Open-Meteo API](https://open-meteo.com).
-- **Kutipan Hari** — Kutipan motivasi acak via [DummyJSON Quotes API](https://dummyjson.com).
-- **Manajemen Tugas** — Tambah, hapus, toggle status selesai, filter (semua/selesai/proses), hapus semua yang selesai.
-- **Catatan Cepat** — Tambah dan hapus catatan pribadi yang otomatis tersimpan.
-- **Penyimpanan Lokal** — Semua data tugas dan catatan disimpan di `localStorage` agar bertahan melewati refresh.
-- **Responsif** — Antarmuka dibangun dengan Tailwind CSS, responsive di semua perangkat.
+Cuaca Real-time — Widget cuaca lokasi kampus ITERA (Lampung Selatan) via [Open-Meteo API](https://open-meteo.com).
+Kutipan Hari — Kutipan motivasi acak via [DummyJSON Quotes API](https://dummyjson.com).
+Manajemen Tugas — Tambah, hapus, toggle status selesai, filter (semua/selesai/proses), hapus semua yang selesai.
+Catatan Cepat — Tambah dan hapus catatan pribadi yang otomatis tersimpan.
+Penyimpanan Lokal — Semua data tugas dan catatan disimpan di `localStorage` agar bertahan melewati refresh.
+Responsif — Antarmuka dibangun dengan Tailwind CSS, responsive di semua perangkat.
 
 ### Screenshot
 
-> 📸 *Silakan jalankan aplikasi dan capture screenshot sendiri.*
+![alt text](image.png)
 
 ---
 

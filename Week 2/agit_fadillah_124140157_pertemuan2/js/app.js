@@ -37,7 +37,7 @@ class TaskItem {
   toListItemHTML() {
     const statusClass = this.completed ? "status-completed" : "status-pending";
     const statusText = this.completed ? "Selesai" : "Proses";
-    const toggleLabel = this.completed ? 'Batal' : 'Tandai';
+    const toggleLabel = this.completed ? 'Belum Selesai' : 'Selesai';
     return `
       <li class="task-item bg-gray-50 p-4 rounded-lg flex items-center justify-between" data-id="${this.id}">
         <div class="flex-1">

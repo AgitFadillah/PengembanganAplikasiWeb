@@ -17,9 +17,9 @@ Statistik otomatis: total, per status, persen lagi baca
 Data tersimpan di localStorage — tetap ada walau refresh
 
 
-Teknologi yang dipake:
+## Teknologi yang dipake:
 
-React 19 : buat UI, lumayan cepet
+**'React 19 : buat UI, lumayan cepet'**
 Vite : build tool andalan
 React Router DOM 7 : ganti halaman tanpa reload
 Context API + hooks : ngatur state global & lokal

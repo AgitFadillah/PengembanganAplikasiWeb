@@ -1,6 +1,3 @@
-// js/modules/data.js
-// Data statis dan konfigurasi API
-
 export const API_ENDPOINTS = {
   WEATHER: "https://api.open-meteo.com/v1/forecast?latitude=-5.36&longitude=105.31&current-weather=true&timezone=Asia/Jakarta",
   QUOTE: "https://dummyjson.com/quotes/random",

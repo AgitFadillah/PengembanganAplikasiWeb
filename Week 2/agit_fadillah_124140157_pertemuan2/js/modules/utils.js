@@ -1,6 +1,3 @@
-// js/modules/utils.js
-// Fungsi utilitas (helper)
-
 export const formatDate = (dateStr) => {
   if (!dateStr) return "-";
   const options = { weekday: "short", year: "numeric", month: "short", day: "numeric" };

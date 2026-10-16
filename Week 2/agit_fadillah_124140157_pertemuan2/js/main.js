@@ -1,10 +1,6 @@
-// js/main.js
-// Entry point: DOM controller, event handlers, render
-
 import { dashboardApp, TaskItem } from "./app.js";
 import { formatDate, capitalize } from "./modules/utils.js";
 
-// Helper: render task list
 const renderTasks = () => {
   const taskList = document.getElementById("task-list");
   const tasks = dashboardApp.getFilteredTasks();
@@ -22,7 +18,6 @@ const renderTasks = () => {
 
   taskList.innerHTML = tasks.map((t) => t.toListItemHTML()).join("");
 
-  // Event listeners untuk toggle dan delete
   document.querySelectorAll(".toggle-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const id = e.target.dataset.id;
@@ -40,7 +35,6 @@ const renderTasks = () => {
   });
 };
 
-// Helper: render notes
 const renderNotes = () => {
   const notesList = document.getElementById("notes-list");
   if (dashboardApp.notes.length === 0) {
@@ -75,7 +69,6 @@ const renderNotes = () => {
   });
 };
 
-// Async: render weather widget
 const renderWeather = async () => {
   const weatherEl = document.getElementById("weather-widget");
   weatherEl.innerHTML = `<span class="text-gray-500">Memuat cuaca...</span>`;
@@ -83,16 +76,15 @@ const renderWeather = async () => {
   const { temperature, windspeed, weather, error } = await dashboardApp.fetchWeather();
 
   if (error) {
-    weatherEl.innerHTML = `<span class="text-red-500">❌ ${error}</span>`;
+    weatherEl.innerHTML = `<span class="text-red-500">ERROR: ${error}</span>`;
     return;
   }
 
-  // Simple weather code mapping
   const weatherEmojis = {
-    0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️", 45: "🌫️", 48: "🌫️",
-    51: "🌦️", 61: "🌧️", 71: "❄️", 80: "🌦️", 95: "⛈️", 99: "⛈️"
+    0: "Sunny", 1: "Mostly Sunny", 2: "Partly Cloudy", 3: "Cloudy", 45: "Fog", 48: "Fog",
+    51: "Light Rain", 61: "Rain", 71: "Snow", 80: "Rain Showers", 95: "Thunderstorm", 99: "Thunderstorm"
   };
-  const emoji = weatherEmojis[weather] || "🌤️";
+  const emoji = weatherEmojis[weather] || "Cloudy";
 
   weatherEl.innerHTML = `
     <div class="flex items-center gap-6">
@@ -105,7 +97,6 @@ const renderWeather = async () => {
   `;
 };
 
-// Async: render quote
 const renderQuote = async () => {
   const quoteEl = document.getElementById("quote-widget");
   quoteEl.innerHTML = `<span class="text-gray-500">Memuat kutipan...</span>`;
@@ -119,13 +110,11 @@ const renderQuote = async () => {
 
   quoteEl.innerHTML = `
     <blockquote class="text-xl italic text-gray-700 text-center mb-2">"${quote}"</blockquote>
-    <cite class="text-gray-500">— ${author || "Tidak diketahui"}</cite>
+    <cite class="text-gray-500">- ${author || "Tidak diketahui"}</cite>
   `;
 };
 
-// Event listeners
 const initEventListeners = () => {
-  // Form tambah tugas
   document.getElementById("task-form")?.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = document.getElementById("task-title");
@@ -141,19 +130,16 @@ const initEventListeners = () => {
     renderTasks();
   });
 
-  // Filter tugas
   document.getElementById("filter-status")?.addEventListener("change", (e) => {
     dashboardApp.setFilter(e.target.value);
     renderTasks();
   });
 
-  // Clear completed
   document.getElementById("clear-completed")?.addEventListener("click", () => {
     dashboardApp.clearCompleted();
     renderTasks();
   });
 
-  // Add note
   document.getElementById("add-note")?.addEventListener("click", () => {
     const noteInput = document.getElementById("note-input");
     if (!noteInput.value.trim()) return;
@@ -163,7 +149,6 @@ const initEventListeners = () => {
   });
 };
 
-// Init: load data and render everything
 const init = async () => {
   dashboardApp.loadFromStorage();
   renderTasks();
@@ -173,7 +158,6 @@ const init = async () => {
   initEventListeners();
 };
 
-// Arrow function: start app
 const start = () => {
   console.log("Personal Dashboard initialized");
   init();

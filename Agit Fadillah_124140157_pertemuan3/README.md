@@ -29,7 +29,7 @@ Data tersimpan di localStorage — tetap ada walau refresh
 
 
 
-Cara nyiapain project:
+## Cara nyiapain project:
 
 Pastiin Node.js v18+ terpasang.
 
@@ -45,7 +45,7 @@ Buka di browser: http://localhost:5173
 
 
 
-Struktur folder:
+## Struktur folder:
 
 ```
 src/

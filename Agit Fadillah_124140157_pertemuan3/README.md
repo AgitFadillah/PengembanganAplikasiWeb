@@ -128,7 +128,8 @@ Screenshot:
 
 Beranda : ![Beranda](src/assets/home.png)
 Form tambah/edit buku : ![Form](src/assets/form.png)
-Daftar buku : ![Daftar](src/assets/buku.png)
+Daftar buku : 
+![Daftar](src/assets/buku.png)
 Statistik : ![Statistik](src/assets/statistik.png)
 
 Modul Praktikum PAW — Teknik Informatika ITERA 2026/2027

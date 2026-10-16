@@ -29,7 +29,7 @@ Personal Dashboard adalah aplikasi web sederhana untuk mengelola kegiatan harian
 ## Struktur Project
 
 ```
-leon_124140157_pertemuan2/
+agit_fadillah_124140157_pertemuan2/
 ├── index.html
 ├── css/
 │   └── style.css
@@ -82,7 +82,7 @@ Berikut adalah daftar lengkap fitur ES6+ dan lokasi kode-nya:
 ### Langkah-langkah
 
 1. Buka VS Code
-2. Buka folder `leon_124140157_pertemuan2`
+2. Buka folder `agit_fadillah_124140157_pertemuan2`
 3. Klik kanan pada file `index.html` → pilih **"Open with Live Server"**
 
 > ⚠️ **Jangan buka langsung dengan double-click** (file://). Browser akan memblokir import modul ES6 karena batasan CORS. Gunakan Live Server untuk protokol `http://localhost`.

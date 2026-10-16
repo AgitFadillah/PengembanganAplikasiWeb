@@ -136,7 +136,7 @@ const initEventListeners = () => {
   });
 
   document.getElementById("clear-completed")?.addEventListener("click", () => {
-    dashboardApp.clearCompleted();
+    dashboardApp.completeAll();
     renderTasks();
   });
 
@@ -153,9 +153,9 @@ const init = async () => {
   dashboardApp.loadFromStorage();
   renderTasks();
   renderNotes();
+  initEventListeners();
   await renderWeather();
   await renderQuote();
-  initEventListeners();
 };
 
 const start = () => {

@@ -37,12 +37,12 @@ class TaskItem {
   toListItemHTML() {
     const statusClass = this.completed ? "status-completed" : "status-pending";
     const statusText = this.completed ? "Selesai" : "Proses";
-    const checkbox = this.completed ? '✓' : '';
+    const toggleLabel = this.completed ? 'Batal' : 'Tandai';
     return `
       <li class="task-item bg-gray-50 p-4 rounded-lg flex items-center justify-between" data-id="${this.id}">
         <div class="flex-1">
           <div class="flex items-start gap-3">
-            <button class="toggle-btn text-lg" data-id="${this.id}">${checkbox}</button>
+            <button class="toggle-btn text-sm px-2 py-1 border rounded-lg" data-id="${this.id}">${toggleLabel}</button>
             <div>
               <div class="flex items-center gap-2">
                 <span class="font-medium">${this.title}</span>
@@ -138,6 +138,14 @@ class DashboardApp {
 
   clearCompleted() {
     this.tasks = this.tasks.filter((t) => !t.completed);
+    this.saveToStorage();
+  }
+
+  completeAll() {
+    this.tasks = this.tasks.map((t) => {
+      t.completed = true;
+      return t;
+    });
     this.saveToStorage();
   }
 

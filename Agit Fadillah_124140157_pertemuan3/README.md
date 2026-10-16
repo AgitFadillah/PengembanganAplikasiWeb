@@ -1,12 +1,12 @@
-Manajemen Buku Pribadi
+# Manajemen Buku Pribadi
 
-Aplikasi buat nyimpen buku pribadi — yang udah dimiliki, lagi dibaca, atau ingin dibeli.
+Aplikasi buat nyimpen buku pribadi hingga yang udah dimiliki, lagi dibaca, atau ingin dibeli.
 
 Agit Fadillah | 124140157 | Prak PAW Pertemuan 3
 
 
 
-Apa sih isinya?
+# Apa sih isinya?
 
 Masih sering lupa buku apa aja? Atau penasaran berapa persen yang lagi dibaca? Aplikasi ini dirancang buat ngumpelin semua info buku pribadi.
 

@@ -33,7 +33,7 @@ Cara nyiapain project:
 
 Pastiin Node.js v18+ terpasang.
 
-git clone https://github.com/nama-pengguna/pemrograman_web_itera_124140157.git
+git clone https://github.com/AgitFadillah/PengembanganAplikasiWeb.git
 cd pemrograman_web_itera_124140157/AgitFadillah_124140157_pertemuan3
 npm install
 npm run dev
@@ -43,27 +43,29 @@ Buka di browser: http://localhost:5173
 
 Struktur folder:
 
+```
 src/
-  assets/ : gambar/icons
-  components/
-    BookForm/ : form isi buku
-    BookItem/ : kartu buku di daftar
-    BookList/ : daftar buku + filter
-    BookFilter/ : dropdown filter + kolom cari
-    Header/ : judul halaman
-    Navbar/ : menu navigasi atas
-  pages/
-    Home/ : halaman utama
-    Stats/ : statistik
-  hooks/
-    useLocalStorage.js
-    useBookStats.js
-    useLocalStorage.test.js
-  context/
-    BookContext.jsx : global state semua buku
-  App.jsx : routing halaman
-  main.jsx : masuk aplikasi
-  index.css : style global
+├── assets/              : gambar/icons
+├── components/
+│   ├── BookForm/        : form isi buku
+│   ├── BookItem/        : kartu buku di daftar
+│   ├── BookList/        : daftar buku + filter
+│   ├── BookFilter/      : dropdown filter + kolom cari
+│   ├── Header/          : judul halaman
+│   └── Navbar/          : menu navigasi atas
+├── pages/
+│   ├── Home/            : halaman utama
+│   └── Stats/           : statistik
+├── hooks/
+│   ├── useLocalStorage.js
+│   ├── useBookStats.js
+│   └── useLocalStorage.test.js
+├── context/
+│   └── BookContext.jsx  : global state semua buku
+├── App.jsx              : routing halaman
+├── main.jsx             : masuk aplikasi
+└── index.css            : style global
+```
 
 
 
@@ -128,8 +130,7 @@ Screenshot:
 
 Beranda : ![Beranda](src/assets/home.png)
 Form tambah/edit buku : ![Form](src/assets/form.png)
-Daftar buku : 
-![Daftar](src/assets/buku.png)
+Daftar buku : ![Daftar](src/assets/buku.png)
 Statistik : ![Statistik](src/assets/statistik.png)
 
 Modul Praktikum PAW — Teknik Informatika ITERA 2026/2027

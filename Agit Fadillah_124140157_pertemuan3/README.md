@@ -83,14 +83,14 @@ src/
 
 
 
-Penjelasan singkat tiap fitur React:
+*Penjelasan singkat tiap fitur React:*
 
-Functional components : semua pakai fungsi biasa
-React hooks : useState, useEffect, useMemo, useCallback
-Context API : semua buku bisa diakses dari mana saja
-Custom hooks : useLocalStorage & useBookStats
-React Router DOM : pindah halaman antara Home dan Stats
-PropTypes : validasi tipe data props
+1. Functional components : semua pakai fungsi biasa
+2. React hooks : useState, useEffect, useMemo, useCallback
+3. Context API : semua buku bisa diakses dari mana saja
+4. Custom hooks : useLocalStorage & useBookStats
+5.React Router DOM : pindah halaman antara Home dan Stats
+6. PropTypes : validasi tipe data props
 
 
 

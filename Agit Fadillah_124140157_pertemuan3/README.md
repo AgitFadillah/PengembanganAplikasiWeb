@@ -115,7 +115,7 @@ PropTypes : validasi tipe data props
 
 ## Hasil test:
 
-npm test
+**npm test**
 
 Outputnya:
 

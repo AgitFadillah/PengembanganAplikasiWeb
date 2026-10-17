@@ -1,0 +1,49 @@
+.book-filter {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.filter-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.filter-select,
+.search-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.filter-select {
+  min-width: 140px;
+  cursor: pointer;
+  background-color: #f8fafc;
+}
+
+.search-input {
+  min-width: 200px;
+}
+
+.search-group {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .book-filter {
+    flex-direction: column;
+  }
+}

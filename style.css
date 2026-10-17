@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+header {
+  background-color: #1e4fa3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid #999;
+  padding: 8px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+}
+.layout {
+  display: flex;
+  gap: 10px;
+}
+.box {
+  background: #e8eefc;
+  border: 1px solid #999;
+  padding: 10px;
+  width: 50%;
+}
+.query-box {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+nav .button {
+  display: inline-block;
+  background-color: white;
+  color: #1e4fa3;
+  text-decoration: none;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #0f2c5e;
+}
+nav .button:hover {
+  background-color: #dbe7ff;
+}
+nav .button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0f2c5e;
+}
+
+form p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form label {
+  display: inline-block;
+  width: 60px;
+}
+form input[type="text"],
+form input[type="email"] {
+  width: 250px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+#pendaftaran {
+  border-top: 4px solid #1e4fa3;
+}
+#detail th {
+  background-color: #1e4fa3;
+  color: white;
+}

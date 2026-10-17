@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas 3 - Pendaftaran</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Pendaftaran Mahasiswa Baru</h1>
+  <p>Tugas Individu 3 — Tabel, Formulir, Layout</p>
+  <nav>
+    <a href="#pendaftaran" class="button">Pendaftaran</a>
+    <a href="#detail" class="button">Detail Pendaftar</a>
+  </nav>
+</header>
+
+<main>
+  <section id="pendaftaran" class="card">
+    <h2>Halaman 1 — Form Pendaftaran</h2>
+    <p>Form ini memakai method GET. Saat klik Daftar, data dikirim lewat query string.</p>
+
+    <div class="layout">
+      <div class="box">
+        <p><strong>Info:</strong> Isi semua kolom lalu klik Daftar.</p>
+      </div>
+      <div class="box">
+        <p><strong>Catatan:</strong> Halaman detail hanya contoh (dummy).</p>
+      </div>
+    </div>
+
+    <form method="GET" action="tugas.html">
+      <p>
+        <label>Nama: </label>
+        <input type="text" name="nama" placeholder="Masukkan nama" />
+      </p>
+      <p>
+        <label>NIM: </label>
+        <input type="text" name="nim" placeholder="124140157" />
+      </p>
+      <p>
+        <label>Email: </label>
+        <input type="email" name="email" placeholder="contoh@email.com" />
+      </p>
+      <p>
+        <label>Kelas: </label>
+        <input type="text" name="kelas" placeholder="RB" />
+      </p>
+      <p>
+        <input type="submit" value="Daftar" />
+        <input type="reset" value="Reset" />
+      </p>
+    </form>
+  </section>
+
+  <section id="detail" class="card">
+    <h2>Halaman 2 — Detail Pendaftar (Dummy)</h2>
+    <p>Contoh query string dari form di atas:</p>
+
+    <table>
+      <tr>
+        <th>Field</th>
+        <th>Data</th>
+      </tr>
+      <tr>
+        <td>Nama</td>
+        <td>Agit Fadillah</td>
+      </tr>
+      <tr>
+        <td>NIM</td>
+        <td>124140157</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>agit.124140157@student.itera.ac.id</td>
+      </tr>
+      <tr>
+        <td>Kelas</td>
+        <td>RB</td>
+      </tr>
+    </table>
+  </section>
+</main>
+
+</body>
+</html>

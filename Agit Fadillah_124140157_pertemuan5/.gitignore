@@ -1,0 +1,16 @@
+# Direktori cache bytecode Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Konfigurasi editor
+.vscode/
+.idea/
+
+# Berkas sistem operasi
+.DS_Store
+Thumbs.db

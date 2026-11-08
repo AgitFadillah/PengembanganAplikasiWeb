@@ -175,11 +175,7 @@ Total item: 4
 ![Hasil eksekusi main.py](image.png)
 ```
 
-Screenshot yang perlu disertakan agar seluruh fitur terbukti:
 
-1. Bagian katalog dan pencarian item
-2. Bagian peminjaman dan pengembalian beserta denda
-3. Bagian status akhir koleksi
 
 
 
